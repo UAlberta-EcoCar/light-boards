@@ -4800,9 +4800,8 @@ Source: www.fairchildsemi.com</description>
 <net name="GND" class="0">
 <segment>
 <pinref part="IC1" gate="A" pin="TR"/>
-<wire x1="-10.16" y1="7.62" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="-12.7" y1="7.62" x2="-12.7" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="7.62" x2="-12.7" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
