@@ -8581,47 +8581,77 @@ Datasheet</description>
 <description>&lt;b&gt;Power Transistors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="SO-08" urn="urn:adsk.eagle:footprint:29404/1" library_version="2">
-<description>&lt;B&gt;Small Outline Narrow Plastic Gull Wing&lt;/B&gt;&lt;p&gt;
-150-mil body, package type SN</description>
-<wire x1="-2.9" y1="3.9" x2="2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="3.9" x2="2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="-3.9" x2="-2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="-2.9" y1="-3.9" x2="-2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<text x="-1.905" y="-0.635" size="0.4064" layer="48">IPC SO8</text>
-<text x="-1.905" y="0.365" size="0.3048" layer="48">JEDEC MS-012 AA</text>
-<rectangle x1="-2.1501" y1="-3.1001" x2="-1.6599" y2="-2" layer="51"/>
-<rectangle x1="-0.8801" y1="-3.1001" x2="-0.3899" y2="-2" layer="51"/>
-<rectangle x1="0.3899" y1="-3.1001" x2="0.8801" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="-3.1001" x2="2.1501" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="2" x2="2.1501" y2="3.1001" layer="51"/>
-<rectangle x1="0.3899" y1="2" x2="0.8801" y2="3.1001" layer="51"/>
-<rectangle x1="-0.8801" y1="2" x2="-0.3899" y2="3.1001" layer="51"/>
-<rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
-<rectangle x1="-1" y1="-1" x2="1" y2="1" layer="35"/>
+<package name="TO220BV" urn="urn:adsk.eagle:footprint:29371/1" library_version="1">
+<description>&lt;b&gt;Molded Package&lt;/b&gt;&lt;p&gt;
+grid 2.54 mm</description>
+<wire x1="4.699" y1="-4.318" x2="4.953" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="4.699" y1="-4.318" x2="-4.699" y2="-4.318" width="0.1524" layer="21"/>
+<wire x1="-4.953" y1="-4.064" x2="-4.699" y2="-4.318" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-1.143" x2="4.953" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="-4.953" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
+<circle x="-4.4958" y="-3.7084" radius="0.254" width="0" layer="21"/>
+<pad name="G" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="D" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="S" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-5.334" y1="-0.762" x2="5.334" y2="0" layer="21"/>
+<rectangle x1="-5.334" y1="-1.27" x2="-3.429" y2="-0.762" layer="21"/>
+<rectangle x1="-1.651" y1="-1.27" x2="-0.889" y2="-0.762" layer="21"/>
+<rectangle x1="-3.429" y1="-1.27" x2="-1.651" y2="-0.762" layer="51"/>
+<rectangle x1="0.889" y1="-1.27" x2="1.651" y2="-0.762" layer="21"/>
+<rectangle x1="3.429" y1="-1.27" x2="5.334" y2="-0.762" layer="21"/>
+<rectangle x1="-0.889" y1="-1.27" x2="0.889" y2="-0.762" layer="51"/>
+<rectangle x1="1.651" y1="-1.27" x2="3.429" y2="-0.762" layer="51"/>
+</package>
+<package name="TO220BH" urn="urn:adsk.eagle:footprint:29377/1" library_version="1">
+<description>&lt;b&gt;Molded Package&lt;/b&gt;&lt;p&gt;
+grid 2.54 mm</description>
+<wire x1="-5.207" y1="-1.27" x2="5.207" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="5.207" y1="14.605" x2="-5.207" y2="14.605" width="0.1524" layer="21"/>
+<wire x1="5.207" y1="-1.27" x2="5.207" y2="11.176" width="0.1524" layer="21"/>
+<wire x1="5.207" y1="11.176" x2="4.318" y2="11.176" width="0.1524" layer="21"/>
+<wire x1="4.318" y1="11.176" x2="4.318" y2="12.7" width="0.1524" layer="21"/>
+<wire x1="4.318" y1="12.7" x2="5.207" y2="12.7" width="0.1524" layer="21"/>
+<wire x1="5.207" y1="12.7" x2="5.207" y2="14.605" width="0.1524" layer="21"/>
+<wire x1="-5.207" y1="-1.27" x2="-5.207" y2="11.176" width="0.1524" layer="21"/>
+<wire x1="-5.207" y1="11.176" x2="-4.318" y2="11.176" width="0.1524" layer="21"/>
+<wire x1="-4.318" y1="11.176" x2="-4.318" y2="12.7" width="0.1524" layer="21"/>
+<wire x1="-4.318" y1="12.7" x2="-5.207" y2="12.7" width="0.1524" layer="21"/>
+<wire x1="-5.207" y1="12.7" x2="-5.207" y2="14.605" width="0.1524" layer="21"/>
+<wire x1="-4.572" y1="-0.635" x2="4.572" y2="-0.635" width="0.0508" layer="21"/>
+<wire x1="4.572" y1="7.62" x2="4.572" y2="-0.635" width="0.0508" layer="21"/>
+<wire x1="4.572" y1="7.62" x2="-4.572" y2="7.62" width="0.0508" layer="21"/>
+<wire x1="-4.572" y1="-0.635" x2="-4.572" y2="7.62" width="0.0508" layer="21"/>
+<circle x="0" y="11.176" radius="1.8034" width="0.1524" layer="21"/>
+<circle x="0" y="11.176" radius="4.191" width="0" layer="42"/>
+<circle x="0" y="11.176" radius="4.191" width="0" layer="43"/>
+<pad name="G" x="-2.54" y="-6.35" drill="1.1176" shape="long" rot="R90"/>
+<pad name="D" x="0" y="-6.35" drill="1.1176" shape="long" rot="R90"/>
+<pad name="S" x="2.54" y="-6.35" drill="1.1176" shape="long" rot="R90"/>
+<text x="-3.81" y="5.207" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.937" y="2.54" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-4.445" y="7.874" size="1.016" layer="21" ratio="10">A17,5mm</text>
+<rectangle x1="2.159" y1="-4.699" x2="2.921" y2="-4.064" layer="21"/>
+<rectangle x1="-0.381" y1="-4.699" x2="0.381" y2="-4.064" layer="21"/>
+<rectangle x1="-2.921" y1="-4.699" x2="-2.159" y2="-4.064" layer="21"/>
+<rectangle x1="-3.175" y1="-4.064" x2="-1.905" y2="-1.27" layer="21"/>
+<rectangle x1="-0.635" y1="-4.064" x2="0.635" y2="-1.27" layer="21"/>
+<rectangle x1="1.905" y1="-4.064" x2="3.175" y2="-1.27" layer="21"/>
+<rectangle x1="-2.921" y1="-6.604" x2="-2.159" y2="-4.699" layer="51"/>
+<rectangle x1="-0.381" y1="-6.604" x2="0.381" y2="-4.699" layer="51"/>
+<rectangle x1="2.159" y1="-6.604" x2="2.921" y2="-4.699" layer="51"/>
+<hole x="0" y="11.176" drill="3.302"/>
 </package>
 </packages>
 <packages3d>
-<package3d name="SO-08" urn="urn:adsk.eagle:package:29505/2" type="model" library_version="2">
-<description>Small Outline Narrow Plastic Gull Wing
-150-mil body, package type SN</description>
+<package3d name="TO220BV" urn="urn:adsk.eagle:package:29484/1" type="box" library_version="1">
+<description>Molded Package
+grid 2.54 mm</description>
+</package3d>
+<package3d name="TO220BH" urn="urn:adsk.eagle:package:29490/1" type="box" library_version="1">
+<description>Molded Package
+grid 2.54 mm</description>
 </package3d>
 </packages3d>
 <symbols>
@@ -8656,24 +8686,33 @@ Datasheet</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="N-MOSFET-SO8" urn="urn:adsk.eagle:component:29576/2" prefix="Q" uservalue="yes" library_version="2">
-<description>&lt;b&gt;N-Channel MOSFET&lt;/b&gt;&lt;p&gt;
-Example:&lt;br&gt;
-FDS7760A; N-Channel Logic Level PowerTrench® MOSFET&lt;br&gt;
-FDS2572; N-Channel UltraFET® Trench MOSFET&lt;br&gt;
-Source: www.fairchildsemi.com</description>
+<deviceset name="PMOSFET_N" urn="urn:adsk.eagle:component:29568/1" prefix="Q" uservalue="yes" library_version="1">
+<description>&lt;b&gt;Power MOSFET N-Channel&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MFN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="S" package="SO-08">
+<device name="TO220BV" package="TO220BV">
 <connects>
-<connect gate="G$1" pin="D" pad="5 6 7 8"/>
-<connect gate="G$1" pin="G" pad="4"/>
-<connect gate="G$1" pin="S" pad="1 2 3"/>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:29505/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:29484/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TO220BH" package="TO220BH">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:29490/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -8839,7 +8878,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="C1" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="1uF"/>
 <part name="C2" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="0.1uF"/>
 <part name="GND1" library="E-P-008-R1.2" deviceset="GND" device=""/>
-<part name="NMOS" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="N-MOSFET-SO8" device="S" package3d_urn="urn:adsk.eagle:package:29505/2"/>
 <part name="GND2" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND4" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="*555" device="D" package3d_urn="urn:adsk.eagle:package:16404/2" technology="LM"/>
@@ -8850,7 +8888,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="C3" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="1uF"/>
 <part name="C4" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="0.1uF"/>
 <part name="GND5" library="E-P-008-R1.2" deviceset="GND" device=""/>
-<part name="NMOS1" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="N-MOSFET-SO8" device="S" package3d_urn="urn:adsk.eagle:package:29505/2"/>
 <part name="GND6" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND8" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND9" library="E-P-008-R1.2" deviceset="GND" device=""/>
@@ -8861,6 +8898,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
 <part name="D6" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
 <part name="D7" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
+<part name="Q1" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BV" package3d_urn="urn:adsk.eagle:package:29484/1" value="10"/>
+<part name="Q2" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BV" package3d_urn="urn:adsk.eagle:package:29484/1" value="10"/>
 </parts>
 <sheets>
 <sheet>
@@ -8888,7 +8927,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <instance part="C1" gate="G$1" x="-55.88" y="25.4"/>
 <instance part="C2" gate="G$1" x="-66.04" y="25.4"/>
 <instance part="GND1" gate="1" x="-55.88" y="17.78"/>
-<instance part="NMOS" gate="G$1" x="-124.46" y="43.18" rot="R180"/>
 <instance part="GND2" gate="1" x="-66.04" y="17.78"/>
 <instance part="GND4" gate="1" x="-101.6" y="55.88" rot="R180"/>
 <instance part="IC2" gate="A" x="76.2" y="40.64"/>
@@ -8899,7 +8937,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <instance part="C3" gate="G$1" x="109.22" y="25.4"/>
 <instance part="C4" gate="G$1" x="99.06" y="25.4"/>
 <instance part="GND5" gate="1" x="109.22" y="17.78"/>
-<instance part="NMOS1" gate="G$1" x="40.64" y="43.18" rot="R180"/>
 <instance part="GND6" gate="1" x="99.06" y="17.78"/>
 <instance part="GND8" gate="1" x="63.5" y="55.88" rot="R180"/>
 <instance part="GND9" gate="1" x="-38.1" y="152.4"/>
@@ -8910,6 +8947,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <instance part="D3" gate="1" x="124.46" y="48.26" rot="R180"/>
 <instance part="D6" gate="1" x="-33.02" y="20.32"/>
 <instance part="D7" gate="1" x="-40.64" y="48.26" rot="R180"/>
+<instance part="Q1" gate="G$1" x="40.64" y="43.18" rot="R180"/>
+<instance part="Q2" gate="G$1" x="-124.46" y="43.18" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -9081,9 +9120,9 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <net name="N$8" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="NMOS" gate="G$1" pin="G"/>
 <wire x1="-119.38" y1="38.1" x2="-121.92" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="38.1" x2="-121.92" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -9131,9 +9170,9 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <net name="N$19" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="NMOS1" gate="G$1" pin="G"/>
 <wire x1="45.72" y1="38.1" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="38.1" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="BLINK" class="0">
@@ -9168,10 +9207,10 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <label x="-38.1" y="160.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="NMOS" gate="G$1" pin="D"/>
 <wire x1="-127" y1="38.1" x2="-124.46" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="38.1" x2="-124.46" y2="25.4" width="0.1524" layer="91"/>
 <label x="-124.46" y="17.78" size="1.778" layer="95" rot="R90"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="OUT2"/>
@@ -9187,10 +9226,10 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <label x="63.5" y="160.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="NMOS1" gate="G$1" pin="D"/>
 <wire x1="38.1" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="38.1" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
 <label x="40.64" y="17.78" size="1.778" layer="95" rot="R90"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="OUT2"/>
@@ -9212,7 +9251,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="119.38" y1="68.58" x2="127" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="33.02" x2="30.48" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="33.02" x2="30.48" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="NMOS1" gate="G$1" pin="S"/>
 <wire x1="38.1" y1="48.26" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
 <junction x="38.1" y="68.58"/>
 <label x="132.08" y="68.58" size="1.778" layer="95"/>
@@ -9225,6 +9263,7 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="119.38" y1="68.58" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
 <junction x="119.38" y="68.58"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="B_BLINK" class="0">
@@ -9242,7 +9281,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="-76.2" y1="68.58" x2="-45.72" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="33.02" x2="-134.62" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="-134.62" y1="33.02" x2="-134.62" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="NMOS" gate="G$1" pin="S"/>
 <wire x1="-127" y1="48.26" x2="-127" y2="68.58" width="0.1524" layer="91"/>
 <junction x="-127" y="68.58"/>
 <label x="-35.56" y="68.58" size="1.778" layer="95"/>
@@ -9252,6 +9290,7 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <junction x="-76.2" y="68.58"/>
 <wire x1="-45.72" y1="68.58" x2="-45.72" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-45.72" y="68.58"/>
+<pinref part="Q2" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="N$2" class="0">
