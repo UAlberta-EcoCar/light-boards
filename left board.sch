@@ -8029,6 +8029,31 @@ NS Package M08A</description>
 <rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
 <rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
 </package>
+<package name="SOT23" urn="urn:adsk.eagle:footprint:16354/1" library_version="1">
+<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
+reflow soldering</description>
+<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.152" x2="-1.422" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.66" x2="-0.864" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="0.864" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.152" width="0.1524" layer="21"/>
+<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+<rectangle x1="-0.5001" y1="-0.3" x2="0.5001" y2="0.3" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="DIL08" urn="urn:adsk.eagle:package:16409/2" type="model" library_version="2">
@@ -8037,6 +8062,10 @@ NS Package M08A</description>
 <package3d name="SO08" urn="urn:adsk.eagle:package:16404/2" type="model" library_version="2">
 <description>Small Outline Package 8
 NS Package M08A</description>
+</package3d>
+<package3d name="SOT23" urn="urn:adsk.eagle:package:16489/1" type="box" library_version="1">
+<description>SMALL OUTLINE TRANSISTOR
+reflow soldering</description>
 </package3d>
 </packages3d>
 <symbols>
@@ -8055,6 +8084,18 @@ NS Package M08A</description>
 <pin name="DIS" x="10.16" y="2.54" length="short" direction="in" rot="R180"/>
 <pin name="V+" x="10.16" y="-7.62" length="short" direction="pwr" rot="R180"/>
 <pin name="GND" x="-10.16" y="-7.62" length="short" direction="pwr"/>
+</symbol>
+<symbol name="LM50" urn="urn:adsk.eagle:symbol:16353/1" library_version="1">
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<text x="-2.286" y="-4.064" size="1.524" layer="95">GND</text>
+<text x="-7.62" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+VS" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="VO" x="10.16" y="0" length="short" direction="in" rot="R180"/>
+<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -8104,6 +8145,30 @@ NS Package M08A</description>
 <technology name="NE"/>
 <technology name="SE"/>
 <technology name="UA"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM50" urn="urn:adsk.eagle:component:16823/1" prefix="IC" library_version="1">
+<description>&lt;b&gt;SOT-23 Single-Supply Centigrade Temperature Sensor&lt;/b&gt;&lt;p&gt;
+Vout = (10mV/°C x Temp °C) +5mmmV&lt;br&gt;
+
+Source: http://cache.national.com/ds/LM/LM50.pdf</description>
+<gates>
+<gate name="G$1" symbol="LM50" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23">
+<connects>
+<connect gate="G$1" pin="+VS" pad="1"/>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="VO" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16489/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8577,112 +8642,6 @@ Datasheet</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="transistor-power" urn="urn:adsk.eagle:library:400">
-<description>&lt;b&gt;Power Transistors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SO-08" urn="urn:adsk.eagle:footprint:29404/1" library_version="2">
-<description>&lt;B&gt;Small Outline Narrow Plastic Gull Wing&lt;/B&gt;&lt;p&gt;
-150-mil body, package type SN</description>
-<wire x1="-2.9" y1="3.9" x2="2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="3.9" x2="2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="-3.9" x2="-2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="-2.9" y1="-3.9" x2="-2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<text x="-1.905" y="-0.635" size="0.4064" layer="48">IPC SO8</text>
-<text x="-1.905" y="0.365" size="0.3048" layer="48">JEDEC MS-012 AA</text>
-<rectangle x1="-2.1501" y1="-3.1001" x2="-1.6599" y2="-2" layer="51"/>
-<rectangle x1="-0.8801" y1="-3.1001" x2="-0.3899" y2="-2" layer="51"/>
-<rectangle x1="0.3899" y1="-3.1001" x2="0.8801" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="-3.1001" x2="2.1501" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="2" x2="2.1501" y2="3.1001" layer="51"/>
-<rectangle x1="0.3899" y1="2" x2="0.8801" y2="3.1001" layer="51"/>
-<rectangle x1="-0.8801" y1="2" x2="-0.3899" y2="3.1001" layer="51"/>
-<rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
-<rectangle x1="-1" y1="-1" x2="1" y2="1" layer="35"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SO-08" urn="urn:adsk.eagle:package:29505/2" type="model" library_version="2">
-<description>Small Outline Narrow Plastic Gull Wing
-150-mil body, package type SN</description>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="MFN" urn="urn:adsk.eagle:symbol:29376/1" library_version="2">
-<wire x1="-1.1176" y1="2.413" x2="-1.1176" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-1.1176" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="1.905" x2="0.5334" y2="1.905" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="1.905" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="-1.905" width="0.1524" layer="94"/>
-<wire x1="0.508" y1="-1.905" x2="2.54" y2="-1.905" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-1.905" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0.508" y1="0" x2="1.778" y2="-0.508" width="0.1524" layer="94"/>
-<wire x1="1.778" y1="-0.508" x2="1.778" y2="0.508" width="0.1524" layer="94"/>
-<wire x1="1.778" y1="0.508" x2="0.508" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.651" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.651" y1="0.254" x2="0.762" y2="0" width="0.3048" layer="94"/>
-<wire x1="0.762" y1="0" x2="1.651" y2="-0.254" width="0.3048" layer="94"/>
-<wire x1="1.651" y1="-0.254" x2="1.651" y2="0" width="0.3048" layer="94"/>
-<wire x1="1.651" y1="0" x2="1.397" y2="0" width="0.3048" layer="94"/>
-<circle x="2.54" y="-1.905" radius="0.127" width="0.4064" layer="94"/>
-<text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="5.08" y="0" size="1.778" layer="96">&gt;VALUE</text>
-<text x="1.27" y="2.54" size="0.8128" layer="93">D</text>
-<text x="1.27" y="-3.175" size="0.8128" layer="93">S</text>
-<text x="-2.54" y="-1.27" size="0.8128" layer="93">G</text>
-<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="-1.27" layer="94"/>
-<rectangle x1="-0.254" y1="1.27" x2="0.508" y2="2.54" layer="94"/>
-<rectangle x1="-0.254" y1="-0.889" x2="0.508" y2="0.889" layer="94"/>
-<pin name="G" x="-2.54" y="-2.54" visible="off" length="point" direction="pas"/>
-<pin name="D" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="S" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="N-MOSFET-SO8" urn="urn:adsk.eagle:component:29576/2" prefix="Q" uservalue="yes" library_version="2">
-<description>&lt;b&gt;N-Channel MOSFET&lt;/b&gt;&lt;p&gt;
-Example:&lt;br&gt;
-FDS7760A; N-Channel Logic Level PowerTrench® MOSFET&lt;br&gt;
-FDS2572; N-Channel UltraFET® Trench MOSFET&lt;br&gt;
-Source: www.fairchildsemi.com</description>
-<gates>
-<gate name="G$1" symbol="MFN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="S" package="SO-08">
-<connects>
-<connect gate="G$1" pin="D" pad="5 6 7 8"/>
-<connect gate="G$1" pin="G" pad="4"/>
-<connect gate="G$1" pin="S" pad="1 2 3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:29505/2"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="slide switch">
 <description>ON-ON sliding switch part number 450-1598-ND</description>
 <packages>
@@ -8839,7 +8798,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="C1" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="1uF"/>
 <part name="C2" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="0.1uF"/>
 <part name="GND1" library="E-P-008-R1.2" deviceset="GND" device=""/>
-<part name="NMOS" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="N-MOSFET-SO8" device="S" package3d_urn="urn:adsk.eagle:package:29505/2"/>
 <part name="GND2" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND4" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="*555" device="D" package3d_urn="urn:adsk.eagle:package:16404/2" technology="LM"/>
@@ -8850,7 +8808,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="C3" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="1uF"/>
 <part name="C4" library="E-P-008-R1.2" deviceset="C-US" device="025-024X044" value="0.1uF"/>
 <part name="GND5" library="E-P-008-R1.2" deviceset="GND" device=""/>
-<part name="NMOS1" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="N-MOSFET-SO8" device="S" package3d_urn="urn:adsk.eagle:package:29505/2"/>
 <part name="GND6" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND8" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND9" library="E-P-008-R1.2" deviceset="GND" device=""/>
@@ -8861,6 +8818,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
 <part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="SRP100" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
+<part name="IC3" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM50" device="" package3d_urn="urn:adsk.eagle:package:16489/1"/>
+<part name="IC4" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM50" device="" package3d_urn="urn:adsk.eagle:package:16489/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -8881,25 +8840,23 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <instance part="L_DRIVE" gate="G$1" x="157.48" y="45.72"/>
 <instance part="L_BLINK" gate="G$1" x="157.48" y="63.5"/>
 <instance part="IC1" gate="A" x="-81.28" y="-15.24"/>
-<instance part="R1" gate="G$1" x="-106.68" y="-17.78"/>
+<instance part="R1" gate="G$1" x="-96.52" y="-17.78"/>
 <instance part="R2" gate="G$1" x="-15.24" y="-17.78" rot="R270"/>
 <instance part="R3" gate="G$1" x="-38.1" y="5.08" rot="R90"/>
 <instance part="VR1" gate="G$1" x="-38.1" y="-17.78" rot="R180"/>
 <instance part="C1" gate="G$1" x="-48.26" y="-30.48"/>
 <instance part="C2" gate="G$1" x="-58.42" y="-30.48"/>
-<instance part="GND1" gate="1" x="-48.26" y="-38.1"/>
-<instance part="NMOS" gate="G$1" x="-116.84" y="-12.7" rot="R180"/>
-<instance part="GND2" gate="1" x="-58.42" y="-38.1"/>
+<instance part="GND1" gate="1" x="-48.26" y="-40.64"/>
+<instance part="GND2" gate="1" x="-58.42" y="-40.64"/>
 <instance part="GND4" gate="1" x="-93.98" y="0" rot="R180"/>
 <instance part="IC2" gate="A" x="83.82" y="-15.24"/>
-<instance part="R4" gate="G$1" x="58.42" y="-17.78"/>
+<instance part="R4" gate="G$1" x="68.58" y="-17.78"/>
 <instance part="R5" gate="G$1" x="149.86" y="-17.78" rot="R270"/>
 <instance part="R6" gate="G$1" x="127" y="5.08" rot="R90"/>
 <instance part="VR2" gate="G$1" x="127" y="-17.78" rot="R180"/>
 <instance part="C3" gate="G$1" x="116.84" y="-30.48"/>
 <instance part="C4" gate="G$1" x="106.68" y="-30.48"/>
 <instance part="GND5" gate="1" x="116.84" y="-38.1"/>
-<instance part="NMOS1" gate="G$1" x="48.26" y="-12.7" rot="R180"/>
 <instance part="GND6" gate="1" x="106.68" y="-38.1"/>
 <instance part="GND8" gate="1" x="71.12" y="0" rot="R180"/>
 <instance part="GND9" gate="1" x="-30.48" y="96.52"/>
@@ -8910,6 +8867,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <instance part="D2" gate="1" x="139.7" y="-27.94"/>
 <instance part="D3" gate="1" x="-30.48" y="-7.62" rot="R180"/>
 <instance part="D4" gate="1" x="-25.4" y="-27.94"/>
+<instance part="IC3" gate="G$1" x="-116.84" y="-5.08" rot="R90"/>
+<instance part="IC4" gate="G$1" x="48.26" y="-5.08" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9020,10 +8979,12 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="-58.42" y1="-38.1" x2="-58.42" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="-38.1" x2="-48.26" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="A" pin="TR"/>
@@ -9076,7 +9037,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <segment>
 <pinref part="IC1" gate="A" pin="CV"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-91.44" y1="-17.78" x2="-101.6" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9093,14 +9053,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="-15.24" y1="-27.94" x2="-15.24" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="D4" gate="1" pin="C"/>
 <wire x1="-22.86" y1="-27.94" x2="-15.24" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="NMOS" gate="G$1" pin="G"/>
-<wire x1="-111.76" y1="-17.78" x2="-114.3" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="-17.78" x2="-114.3" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -9150,7 +9102,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <segment>
 <pinref part="IC2" gate="A" pin="CV"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="-17.78" x2="63.5" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -9167,14 +9118,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="149.86" y1="-27.94" x2="149.86" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="D2" gate="1" pin="C"/>
 <wire x1="149.86" y1="-27.94" x2="142.24" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="NMOS1" gate="G$1" pin="G"/>
-<wire x1="53.34" y1="-17.78" x2="50.8" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="-17.78" x2="50.8" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BLINK" class="0">
@@ -9209,15 +9152,14 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <label x="-30.48" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="NMOS" gate="G$1" pin="D"/>
-<wire x1="-119.38" y1="-17.78" x2="-116.84" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="-17.78" x2="-116.84" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-116.84" y="-38.1" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="OUT2"/>
 <wire x1="88.9" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
 <label x="83.82" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-109.22" y1="-5.08" x2="-109.22" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-109.22" y="-40.64" size="1.778" layer="95" rot="R90"/>
+<pinref part="IC3" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="D_OUT" class="0">
@@ -9228,15 +9170,14 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <label x="71.12" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="NMOS1" gate="G$1" pin="D"/>
-<wire x1="45.72" y1="-17.78" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-17.78" x2="48.26" y2="-30.48" width="0.1524" layer="91"/>
-<label x="48.26" y="-38.1" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="OUT2"/>
 <wire x1="88.9" y1="55.88" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 <label x="83.82" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="G$1" pin="GND"/>
+<wire x1="55.88" y1="-5.08" x2="55.88" y2="-33.02" width="0.1524" layer="91"/>
+<label x="55.88" y="-33.02" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="D_BLINK" class="0">
@@ -9247,15 +9188,12 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 </segment>
 <segment>
 <pinref part="IC2" gate="A" pin="GND"/>
-<wire x1="38.1" y1="12.7" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="12.7" x2="96.52" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="12.7" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="12.7" x2="96.52" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="12.7" x2="127" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="127" y1="12.7" x2="134.62" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="-22.86" x2="38.1" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="-22.86" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="NMOS1" gate="G$1" pin="S"/>
-<wire x1="45.72" y1="-7.62" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
-<junction x="45.72" y="12.7"/>
 <label x="139.7" y="12.7" size="1.778" layer="95"/>
 <label x="139.7" y="12.7" size="1.778" layer="95"/>
 <label x="139.7" y="12.7" size="1.778" layer="95"/>
@@ -9266,6 +9204,9 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="127" y1="10.16" x2="127" y2="12.7" width="0.1524" layer="91"/>
 <junction x="127" y="12.7"/>
+<pinref part="IC4" gate="G$1" pin="VO"/>
+<wire x1="48.26" y1="5.08" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
+<junction x="48.26" y="12.7"/>
 </segment>
 </net>
 <net name="B_BLINK" class="0">
@@ -9276,15 +9217,12 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="GND"/>
-<wire x1="-127" y1="12.7" x2="-119.38" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="12.7" x2="-68.58" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-127" y1="12.7" x2="-116.84" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="12.7" x2="-68.58" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="12.7" x2="-38.1" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="12.7" x2="-30.48" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="-22.86" x2="-127" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="-127" y1="-22.86" x2="-127" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="NMOS" gate="G$1" pin="S"/>
-<wire x1="-119.38" y1="-7.62" x2="-119.38" y2="12.7" width="0.1524" layer="91"/>
-<junction x="-119.38" y="12.7"/>
 <label x="-27.94" y="12.7" size="1.778" layer="95"/>
 <pinref part="IC1" gate="A" pin="Q"/>
 <wire x1="-71.12" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
@@ -9293,6 +9231,9 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-38.1" y1="10.16" x2="-38.1" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-38.1" y="12.7"/>
+<pinref part="IC3" gate="G$1" pin="VO"/>
+<wire x1="-116.84" y1="5.08" x2="-116.84" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-116.84" y="12.7"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9309,6 +9250,22 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="-33.02" y1="-7.62" x2="-38.1" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="VR1" gate="G$1" pin="A"/>
 <wire x1="-38.1" y1="-7.62" x2="-38.1" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="IC4" gate="G$1" pin="+VS"/>
+<wire x1="48.26" y1="-15.24" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-17.78" x2="63.5" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="IC3" gate="G$1" pin="+VS"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-116.84" y1="-15.24" x2="-116.84" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="-17.78" x2="-101.6" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
