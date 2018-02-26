@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -150,23 +150,6 @@
 <text x="41.125" y="19.075" size="1.778" layer="25" rot="R270">BRAKE_L</text>
 </plain>
 <libraries>
-<library name="TE 2-pin connector">
-<packages>
-<package name="2_PIN_CONNECT">
-<hole x="0" y="5.33" drill="4"/>
-<pad name="V/SIG" x="-3.34" y="12.67" drill="1.4" shape="square"/>
-<pad name="G/LOW" x="3.34" y="12.67" drill="1.4" shape="square"/>
-<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
-</package>
-</packages>
-</library>
 <library name="ETHERNET">
 <packages>
 <package name="A122645-ND">
@@ -213,6 +196,23 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
 <circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
 <hole x="0" y="0" drill="3.302"/>
+</package>
+</packages>
+</library>
+<library name="TE 2-pin connector">
+<packages>
+<package name="2_PIN_CONNECT">
+<hole x="0" y="5.33" drill="4"/>
+<pad name="V/SIG" x="-2.07" y="12.67" drill="1.4" shape="square"/>
+<pad name="G/LOW" x="2.07" y="12.67" drill="1.4" shape="square"/>
+<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -406,89 +406,95 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="L_DRIVE" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.72" y="43.165" rot="R90"/>
-<element name="L_SIG" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.72" y="13.405" rot="R90"/>
 <element name="REAR" library="ETHERNET" package="A122645-ND" value="ETHERNET" x="5.215" y="38.93" rot="R270"/>
-<element name="R_SIG" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.72" y="58.585" rot="R90"/>
-<element name="T_DRIVE" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.72" y="28.32" rot="R90"/>
 <element name="H1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="3.85" y="3.85"/>
 <element name="H2" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="56" y="3.85"/>
 <element name="H3" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="3.85" y="68.775"/>
 <element name="H4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="56.175" y="68.775"/>
+<element name="U$1" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.675" y="28.7" rot="R90"/>
+<element name="U$2" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.675" y="58.625" rot="R90"/>
+<element name="U$3" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.675" y="13.475" rot="R90"/>
+<element name="U$4" library="TE 2-pin connector" package="2_PIN_CONNECT" value="2_PIN_TECONNECTOR" x="59.675" y="43.75" rot="R90"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="REAR" pad="P$1"/>
-<contactref element="L_DRIVE" pad="V/SIG"/>
 <wire x1="9.05434375" y1="35.2096" x2="10.01565625" y2="35.2096" width="0.508" layer="1"/>
 <wire x1="7.755" y1="35.35" x2="8.91394375" y2="35.35" width="0.508" layer="1"/>
 <wire x1="8.91394375" y1="35.35" x2="9.05434375" y2="35.2096" width="0.508" layer="1"/>
-<wire x1="14.63105625" y1="39.825" x2="47.05" y2="39.825" width="0.508" layer="1"/>
 <wire x1="10.01565625" y1="35.2096" x2="14.63105625" y2="39.825" width="0.508" layer="1"/>
+<contactref element="U$4" pad="V/SIG"/>
+<wire x1="14.63105625" y1="39.825" x2="45.15" y2="39.825" width="0.508" layer="1"/>
+<wire x1="45.15" y1="39.825" x2="47.005" y2="41.68" width="0.508" layer="1"/>
 </signal>
 <signal name="BRAKE_L">
 <contactref element="REAR" pad="P$4"/>
-<contactref element="L_SIG" pad="G/LOW"/>
 <wire x1="9.535" y1="38.41" x2="12.4246" y2="35.5204" width="0.508" layer="16"/>
 <wire x1="12.4246" y1="35.5204" x2="14.83565625" y2="35.5204" width="0.508" layer="16"/>
-<wire x1="33.61105625" y1="16.745" x2="47.05" y2="16.745" width="0.508" layer="16"/>
 <wire x1="14.83565625" y1="35.5204" x2="33.61105625" y2="16.745" width="0.508" layer="16"/>
+<contactref element="U$3" pad="G/LOW"/>
+<wire x1="33.61105625" y1="16.745" x2="45.805" y2="16.745" width="0.508" layer="16"/>
+<wire x1="45.805" y1="16.745" x2="47.005" y2="15.545" width="0.508" layer="16"/>
 </signal>
 <signal name="BRAKE_R">
 <contactref element="REAR" pad="P$6"/>
-<contactref element="R_SIG" pad="G/LOW"/>
 <via x="32.025" y="53.725" extent="1-16" drill="0.35"/>
 <wire x1="9.535" y1="40.45" x2="13.1946" y2="44.1096" width="0.508" layer="1"/>
 <wire x1="13.1946" y1="44.1096" x2="13.1946" y2="46.27065625" width="0.508" layer="1"/>
 <wire x1="13.1946" y1="46.27065625" x2="20.64894375" y2="53.725" width="0.508" layer="1"/>
 <wire x1="20.64894375" y1="53.725" x2="32.025" y2="53.725" width="0.508" layer="1"/>
 <wire x1="32.025" y1="53.725" x2="38.85" y2="53.725" width="0.508" layer="16"/>
-<wire x1="38.85" y1="53.725" x2="47.05" y2="61.925" width="0.508" layer="16"/>
+<contactref element="U$2" pad="G/LOW"/>
+<wire x1="38.85" y1="53.725" x2="45.82" y2="60.695" width="0.508" layer="16"/>
+<wire x1="45.82" y1="60.695" x2="47.005" y2="60.695" width="0.508" layer="16"/>
 </signal>
 <signal name="DRIVE_L">
 <contactref element="REAR" pad="P$8"/>
-<contactref element="T_DRIVE" pad="G/LOW"/>
 <wire x1="9.535" y1="42.49" x2="20.365" y2="31.66" width="0.508" layer="16"/>
-<wire x1="20.365" y1="31.66" x2="47.05" y2="31.66" width="0.508" layer="16"/>
+<contactref element="U$1" pad="G/LOW"/>
+<wire x1="20.365" y1="31.66" x2="46.115" y2="31.66" width="0.508" layer="16"/>
+<wire x1="46.115" y1="31.66" x2="47.005" y2="30.77" width="0.508" layer="16"/>
 </signal>
 <signal name="N$2">
 <contactref element="REAR" pad="P$2"/>
-<contactref element="L_SIG" pad="V/SIG"/>
 <wire x1="9.535" y1="36.37" x2="13.1946" y2="32.7104" width="0.508" layer="16"/>
 <wire x1="13.1946" y1="32.7104" x2="13.1946" y2="31.58934375" width="0.508" layer="16"/>
 <wire x1="13.1946" y1="31.58934375" x2="34.71894375" y2="10.065" width="0.508" layer="16"/>
-<wire x1="34.71894375" y1="10.065" x2="47.05" y2="10.065" width="0.508" layer="16"/>
+<contactref element="U$3" pad="V/SIG"/>
+<wire x1="34.71894375" y1="10.065" x2="45.665" y2="10.065" width="0.508" layer="16"/>
+<wire x1="45.665" y1="10.065" x2="47.005" y2="11.405" width="0.508" layer="16"/>
 </signal>
 <signal name="N$3">
 <contactref element="REAR" pad="P$5"/>
-<contactref element="R_SIG" pad="V/SIG"/>
 <wire x1="6.5946" y1="40.98934375" x2="6.5946" y2="41.95065625" width="0.508" layer="1"/>
 <wire x1="7.755" y1="39.43" x2="7.755" y2="39.82894375" width="0.508" layer="1"/>
 <wire x1="7.755" y1="39.82894375" x2="6.5946" y2="40.98934375" width="0.508" layer="1"/>
-<wire x1="6.5946" y1="41.95065625" x2="19.88894375" y2="55.245" width="0.508" layer="1"/>
-<wire x1="19.88894375" y1="55.245" x2="47.05" y2="55.245" width="0.508" layer="1"/>
+<contactref element="U$2" pad="V/SIG"/>
+<wire x1="21.19894375" y1="56.555" x2="47.005" y2="56.555" width="0.508" layer="1"/>
+<wire x1="6.5946" y1="41.95065625" x2="21.19894375" y2="56.555" width="0.508" layer="1"/>
 </signal>
 <signal name="DRIVE_R">
 <contactref element="REAR" pad="P$7"/>
-<contactref element="L_DRIVE" pad="G/LOW"/>
 <wire x1="7.755" y1="41.47" x2="8.3746" y2="42.0896" width="0.508" layer="16"/>
 <wire x1="8.3746" y1="42.0896" x2="8.3746" y2="42.97065625" width="0.508" layer="16"/>
-<wire x1="14.83565625" y1="46.9504" x2="15.28105625" y2="46.505" width="0.508" layer="16"/>
-<wire x1="15.28105625" y1="46.505" x2="47.05" y2="46.505" width="0.508" layer="16"/>
 <wire x1="11.90894375" y1="46.505" x2="12.79" y2="46.505" width="0.508" layer="16"/>
 <wire x1="12.79" y1="46.505" x2="13.2354" y2="46.9504" width="0.508" layer="16"/>
 <wire x1="8.3746" y1="42.97065625" x2="11.90894375" y2="46.505" width="0.508" layer="16"/>
 <wire x1="13.2354" y1="46.9504" x2="14.83565625" y2="46.9504" width="0.508" layer="16"/>
+<contactref element="U$4" pad="G/LOW"/>
+<wire x1="15.96605625" y1="45.82" x2="47.005" y2="45.82" width="0.508" layer="16"/>
+<wire x1="14.83565625" y1="46.9504" x2="15.96605625" y2="45.82" width="0.508" layer="16"/>
 </signal>
 <signal name="N$7">
 <contactref element="REAR" pad="P$3"/>
-<contactref element="T_DRIVE" pad="V/SIG"/>
 <wire x1="2.32" y1="33.77915" x2="2.32" y2="31.38085" width="0.508" layer="1"/>
 <wire x1="7.755" y1="37.39" x2="6.8754" y2="36.5104" width="0.508" layer="1"/>
 <wire x1="6.8754" y1="36.5104" x2="5.05125" y2="36.5104" width="0.508" layer="1"/>
 <wire x1="5.05125" y1="36.5104" x2="2.32" y2="33.77915" width="0.508" layer="1"/>
 <wire x1="2.32" y1="31.38085" x2="8.72085" y2="24.98" width="0.508" layer="1"/>
-<wire x1="8.72085" y1="24.98" x2="47.05" y2="24.98" width="0.508" layer="1"/>
+<contactref element="U$1" pad="V/SIG"/>
+<wire x1="8.72085" y1="24.98" x2="45.355" y2="24.98" width="0.508" layer="1"/>
+<wire x1="45.355" y1="24.98" x2="47.005" y2="26.63" width="0.508" layer="1"/>
 </signal>
 </signals>
 </board>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -223,56 +223,6 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="TE 2-pin connector">
-<packages>
-<package name="2_PIN_CONNECT">
-<hole x="0" y="5.33" drill="4"/>
-<pad name="V/SIG" x="-3.34" y="12.67" drill="1.4" shape="square"/>
-<pad name="G/LOW" x="3.34" y="12.67" drill="1.4" shape="square"/>
-<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="2PIN_CONNECTOR">
-<wire x1="0" y1="5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<pin name="G/LOW" x="-5.08" y="2.54" length="middle" rot="R180"/>
-<pin name="V/SIG" x="-5.08" y="-2.54" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="2_PIN_TECONNECTOR">
-<description>2-pin connector for high power connections on board</description>
-<gates>
-<gate name="G$1" symbol="2PIN_CONNECTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="2_PIN_CONNECT">
-<connects>
-<connect gate="G$1" pin="G/LOW" pad="G/LOW"/>
-<connect gate="G$1" pin="V/SIG" pad="V/SIG"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Electromechanical">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find anything that moves- switches, relays, buttons, potentiometers. Also, anything that goes on a board but isn't electrical in nature- screws, standoffs, etc.&lt;br&gt;&lt;br&gt;
@@ -330,6 +280,56 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </deviceset>
 </devicesets>
 </library>
+<library name="TE 2-pin connector">
+<packages>
+<package name="2_PIN_CONNECT">
+<hole x="0" y="5.33" drill="4"/>
+<pad name="V/SIG" x="-2.07" y="12.67" drill="1.4" shape="square"/>
+<pad name="G/LOW" x="2.07" y="12.67" drill="1.4" shape="square"/>
+<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="2PIN_CONNECTOR">
+<wire x1="0" y1="5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<pin name="G/LOW" x="-5.08" y="2.54" length="middle" rot="R180"/>
+<pin name="V/SIG" x="-5.08" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="2_PIN_TECONNECTOR">
+<description>2-pin connector for high power connections on board</description>
+<gates>
+<gate name="G$1" symbol="2PIN_CONNECTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2_PIN_CONNECT">
+<connects>
+<connect gate="G$1" pin="G/LOW" pad="G/LOW"/>
+<connect gate="G$1" pin="V/SIG" pad="V/SIG"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -341,14 +341,14 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </classes>
 <parts>
 <part name="REAR" library="ETHERNET" deviceset="ETHERNET" device=""/>
-<part name="T_DRIVE" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
-<part name="R_SIG" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
-<part name="L_SIG" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
-<part name="L_DRIVE" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
 <part name="H1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="H2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="H3" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="H4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="U$1" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
+<part name="U$2" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
+<part name="U$3" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
+<part name="U$4" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -356,14 +356,14 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </plain>
 <instances>
 <instance part="REAR" gate="G$1" x="48.26" y="68.58" rot="R180"/>
-<instance part="T_DRIVE" gate="G$1" x="116.84" y="88.9"/>
-<instance part="R_SIG" gate="G$1" x="119.38" y="68.58"/>
-<instance part="L_SIG" gate="G$1" x="119.38" y="50.8"/>
-<instance part="L_DRIVE" gate="G$1" x="119.38" y="30.48"/>
 <instance part="H1" gate="G$1" x="30.48" y="38.1"/>
 <instance part="H2" gate="G$1" x="38.1" y="38.1"/>
 <instance part="H3" gate="G$1" x="30.48" y="33.02"/>
 <instance part="H4" gate="G$1" x="38.1" y="33.02"/>
+<instance part="U$1" gate="G$1" x="116.84" y="88.9"/>
+<instance part="U$2" gate="G$1" x="119.38" y="68.58"/>
+<instance part="U$3" gate="G$1" x="119.38" y="50.8"/>
+<instance part="U$4" gate="G$1" x="119.38" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -374,8 +374,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="53.34" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="53.34" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="27.94" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="L_DRIVE" gate="G$1" pin="V/SIG"/>
 <label x="71.12" y="27.94" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="V/SIG"/>
 </segment>
 </net>
 <net name="BRAKE_L" class="0">
@@ -383,11 +383,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="4"/>
 <wire x1="53.34" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="60.96" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="L_SIG" gate="G$1" pin="G/LOW"/>
-<wire x1="101.6" y1="53.34" x2="102.87" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="102.87" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
 <label x="78.74" y="53.34" size="1.778" layer="95"/>
+<pinref part="U$3" gate="G$1" pin="G/LOW"/>
 </segment>
 </net>
 <net name="BRAKE_R" class="0">
@@ -395,21 +393,19 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="6"/>
 <wire x1="53.34" y1="66.04" x2="96.52" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="66.04" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="71.12" x2="101.6" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="R_SIG" gate="G$1" pin="G/LOW"/>
-<wire x1="101.6" y1="71.12" x2="102.87" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="102.87" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
 <label x="73.66" y="66.04" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="G/LOW"/>
 </segment>
 </net>
 <net name="DRIVE_L" class="0">
 <segment>
 <pinref part="REAR" gate="G$1" pin="8"/>
 <wire x1="53.34" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="T_DRIVE" gate="G$1" pin="G/LOW"/>
 <wire x1="86.36" y1="71.12" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
 <label x="73.66" y="71.12" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="G/LOW"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -417,9 +413,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="55.88" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="L_SIG" gate="G$1" pin="V/SIG"/>
 <wire x1="71.12" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
 <label x="76.2" y="48.26" size="1.778" layer="95"/>
+<pinref part="U$3" gate="G$1" pin="V/SIG"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -427,9 +423,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="5"/>
 <wire x1="53.34" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="63.5" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="R_SIG" gate="G$1" pin="V/SIG"/>
 <wire x1="106.68" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
 <label x="81.28" y="63.5" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="V/SIG"/>
 </segment>
 </net>
 <net name="DRIVE_R" class="0">
@@ -437,9 +433,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="7"/>
 <wire x1="53.34" y1="68.58" x2="58.42" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="68.58" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="L_DRIVE" gate="G$1" pin="G/LOW"/>
 <wire x1="58.42" y1="33.02" x2="114.3" y2="33.02" width="0.1524" layer="91"/>
 <label x="71.12" y="33.02" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="G/LOW"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -447,9 +443,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="REAR" gate="G$1" pin="3"/>
 <wire x1="53.34" y1="58.42" x2="66.04" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="58.42" x2="66.04" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="T_DRIVE" gate="G$1" pin="V/SIG"/>
 <wire x1="66.04" y1="86.36" x2="111.76" y2="86.36" width="0.1524" layer="91"/>
 <label x="71.12" y="86.36" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="V/SIG"/>
 </segment>
 </net>
 </nets>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -145,6 +145,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
@@ -174,56 +176,6 @@ by exp-lbrs.ulp</description>
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="TE 2-pin connector">
-<packages>
-<package name="2_PIN_CONNECT">
-<hole x="0" y="5.33" drill="4"/>
-<pad name="V/SIG" x="-3.34" y="12.67" drill="1.4" shape="square"/>
-<pad name="G/LOW" x="3.34" y="12.67" drill="1.4" shape="square"/>
-<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
-<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="2PIN_CONNECTOR">
-<wire x1="0" y1="5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<pin name="G/LOW" x="-5.08" y="2.54" length="middle" rot="R180"/>
-<pin name="V/SIG" x="-5.08" y="-2.54" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="2_PIN_TECONNECTOR">
-<description>2-pin connector for high power connections on board</description>
-<gates>
-<gate name="G$1" symbol="2PIN_CONNECTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="2_PIN_CONNECT">
-<connects>
-<connect gate="G$1" pin="G/LOW" pad="G/LOW"/>
-<connect gate="G$1" pin="V/SIG" pad="V/SIG"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1095,6 +1047,22 @@ Basic small signal diode good up to 200mA. SMB footprint. Common part #: BAS16</
 <wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
 <wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
 </symbol>
+<symbol name="DIODE-SCHOTTKY">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.778" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="0.762" y2="-1.524" width="0.254" layer="94"/>
+<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DIODE" prefix="D" uservalue="yes">
@@ -1239,6 +1207,27 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MBRA140" prefix="D">
+<description>40V, 1A Schottky rectifier&lt;br&gt;
+SMA/DO-214AC package&lt;br&gt;
+DIO-08053</description>
+<gates>
+<gate name="G$1" symbol="DIODE-SCHOTTKY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMA-DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-08053"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1517,6 +1506,56 @@ by R. Vogg  15.March.2002</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="TE 2-pin connector">
+<packages>
+<package name="2_PIN_CONNECT">
+<hole x="0" y="5.33" drill="4"/>
+<pad name="V/SIG" x="-2.07" y="12.67" drill="1.4" shape="square"/>
+<pad name="G/LOW" x="2.07" y="12.67" drill="1.4" shape="square"/>
+<wire x1="-6.35" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="15.24" x2="6.35" y2="15.24" width="0.127" layer="21"/>
+<wire x1="6.35" y1="15.24" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="2PIN_CONNECTOR">
+<wire x1="0" y1="5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<pin name="G/LOW" x="-5.08" y="2.54" length="middle" rot="R180"/>
+<pin name="V/SIG" x="-5.08" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="2_PIN_TECONNECTOR">
+<description>2-pin connector for high power connections on board</description>
+<gates>
+<gate name="G$1" symbol="2PIN_CONNECTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2_PIN_CONNECT">
+<connects>
+<connect gate="G$1" pin="G/LOW" pad="G/LOW"/>
+<connect gate="G$1" pin="V/SIG" pad="V/SIG"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1527,8 +1566,6 @@ by R. Vogg  15.March.2002</description>
 </class>
 </classes>
 <parts>
-<part name="L_DRIVE" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
-<part name="L_BLINK" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
 <part name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="*555" device="D" package3d_urn="urn:adsk.eagle:package:16404/2" technology="LM"/>
 <part name="GND1" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND2" library="E-P-008-R1.2" deviceset="GND" device=""/>
@@ -1589,14 +1626,16 @@ by R. Vogg  15.March.2002</description>
 <part name="H4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="Q3" library="transistor-fet" library_urn="urn:adsk.eagle:library:396" deviceset="BSS101" device="" package3d_urn="urn:adsk.eagle:package:28523/1"/>
 <part name="Q4" library="transistor-fet" library_urn="urn:adsk.eagle:library:396" deviceset="BSS101" device="" package3d_urn="urn:adsk.eagle:package:28523/1"/>
+<part name="U$5" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
+<part name="U$7" library="TE 2-pin connector" deviceset="2_PIN_TECONNECTOR" device=""/>
+<part name="D1" library="SparkFun-DiscreteSemi" deviceset="MBRA140" device=""/>
+<part name="D2" library="SparkFun-DiscreteSemi" deviceset="MBRA140" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="L_DRIVE" gate="G$1" x="157.48" y="45.72"/>
-<instance part="L_BLINK" gate="G$1" x="157.48" y="63.5"/>
 <instance part="IC1" gate="A" x="-81.28" y="-15.24"/>
 <instance part="GND1" gate="1" x="-48.26" y="-40.64"/>
 <instance part="GND2" gate="1" x="-58.42" y="-40.64"/>
@@ -1657,6 +1696,10 @@ by R. Vogg  15.March.2002</description>
 <instance part="H4" gate="G$1" x="88.9" y="33.02"/>
 <instance part="Q3" gate="G$1" x="-111.76" y="-2.54" rot="R180"/>
 <instance part="Q4" gate="G$1" x="48.26" y="-5.08" rot="R180"/>
+<instance part="U$5" gate="G$1" x="157.48" y="27.94"/>
+<instance part="U$7" gate="G$1" x="157.48" y="63.5"/>
+<instance part="D1" gate="G$1" x="142.24" y="73.66" rot="R180"/>
+<instance part="D2" gate="G$1" x="142.24" y="35.56" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -1727,14 +1770,23 @@ by R. Vogg  15.March.2002</description>
 <pinref part="C5" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="L_BLINK" gate="G$1" pin="G/LOW"/>
 <wire x1="152.4" y1="66.04" x2="134.62" y2="66.04" width="0.1524" layer="91"/>
 <label x="129.54" y="66.04" size="1.778" layer="95"/>
+<pinref part="U$7" gate="G$1" pin="G/LOW"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="144.78" y1="73.66" x2="152.4" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="73.66" x2="152.4" y2="66.04" width="0.1524" layer="91"/>
+<junction x="152.4" y="66.04"/>
 </segment>
 <segment>
-<pinref part="L_DRIVE" gate="G$1" pin="G/LOW"/>
-<wire x1="152.4" y1="48.26" x2="134.62" y2="48.26" width="0.1524" layer="91"/>
-<label x="129.54" y="48.26" size="1.778" layer="95"/>
+<wire x1="152.4" y1="30.48" x2="142.24" y2="30.48" width="0.1524" layer="91"/>
+<label x="142.24" y="30.48" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="G/LOW"/>
+<wire x1="152.4" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="30.48" x2="149.86" y2="35.56" width="0.1524" layer="91"/>
+<junction x="152.4" y="30.48"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="149.86" y1="35.56" x2="144.78" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D16" gate="G$1" pin="C"/>
@@ -1854,9 +1906,14 @@ by R. Vogg  15.March.2002</description>
 </net>
 <net name="BLINK" class="0">
 <segment>
-<pinref part="L_BLINK" gate="G$1" pin="V/SIG"/>
-<wire x1="152.4" y1="60.96" x2="134.62" y2="60.96" width="0.1524" layer="91"/>
-<label x="129.54" y="60.96" size="1.778" layer="95"/>
+<wire x1="152.4" y1="60.96" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<label x="121.92" y="58.42" size="1.778" layer="95"/>
+<pinref part="U$7" gate="G$1" pin="V/SIG"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="124.46" y1="60.96" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="73.66" x2="124.46" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="73.66" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<junction x="124.46" y="60.96"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="IN"/>
@@ -1866,9 +1923,14 @@ by R. Vogg  15.March.2002</description>
 </net>
 <net name="DRIVE" class="0">
 <segment>
-<pinref part="L_DRIVE" gate="G$1" pin="V/SIG"/>
-<wire x1="152.4" y1="43.18" x2="134.62" y2="43.18" width="0.1524" layer="91"/>
-<label x="129.54" y="43.18" size="1.778" layer="95"/>
+<wire x1="152.4" y1="25.4" x2="137.16" y2="25.4" width="0.1524" layer="91"/>
+<label x="124.46" y="25.4" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="V/SIG"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<wire x1="139.7" y1="35.56" x2="137.16" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="35.56" x2="137.16" y2="25.4" width="0.1524" layer="91"/>
+<junction x="137.16" y="25.4"/>
+<wire x1="137.16" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="IN"/>
