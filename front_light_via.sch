@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.1">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -368,76 +368,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="53.34" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="27.94" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
-<label x="81.28" y="27.94" size="1.778" layer="95"/>
-<pinref part="U$4" gate="G$1" pin="V/SIG"/>
-</segment>
-</net>
-<net name="BLINK_L" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="2"/>
-<wire x1="53.34" y1="55.88" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="55.88" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="33.02" x2="114.3" y2="33.02" width="0.1524" layer="91"/>
-<label x="81.28" y="33.02" size="1.778" layer="95"/>
-<pinref part="U$4" gate="G$1" pin="G/LOW"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="3"/>
-<wire x1="53.34" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="58.42" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
-<label x="83.82" y="48.26" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="V/SIG"/>
-</segment>
-</net>
-<net name="BLIINK_R" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="4"/>
-<wire x1="53.34" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="60.96" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="53.34" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
-<label x="86.36" y="53.34" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="G/LOW"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="5"/>
-<wire x1="53.34" y1="63.5" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="63.5" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
-<label x="88.9" y="63.5" size="1.778" layer="95"/>
-<pinref part="U$2" gate="G$1" pin="V/SIG"/>
-</segment>
-</net>
-<net name="DRIVING_R" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="6"/>
-<wire x1="53.34" y1="66.04" x2="96.52" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="66.04" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
-<label x="86.36" y="66.04" size="1.778" layer="95"/>
-<pinref part="U$2" gate="G$1" pin="G/LOW"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="FRONT" gate="G$1" pin="7"/>
-<wire x1="53.34" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="68.58" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
-<label x="81.28" y="68.58" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="V/SIG"/>
-</segment>
-</net>
 <net name="DRIVING_L" class="0">
 <segment>
 <pinref part="FRONT" gate="G$1" pin="8"/>
@@ -446,6 +376,71 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="86.36" y1="91.44" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
 <label x="76.2" y="71.12" size="1.778" layer="95"/>
 <pinref part="U$1" gate="G$1" pin="G/LOW"/>
+</segment>
+</net>
+<net name="DRIVING_RIGHT" class="0">
+<segment>
+<pinref part="FRONT" gate="G$1" pin="7"/>
+<wire x1="53.34" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="68.58" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="G/LOW"/>
+<wire x1="96.52" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
+<label x="73.66" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="R_SIG" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="G/LOW"/>
+<wire x1="114.3" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="53.34" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="FRONT" gate="G$1" pin="6"/>
+<wire x1="86.36" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<label x="71.12" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="L_SIG" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="G/LOW"/>
+<wire x1="114.3" y1="33.02" x2="83.82" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="33.02" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="FRONT" gate="G$1" pin="5"/>
+<wire x1="83.82" y1="63.5" x2="53.34" y2="63.5" width="0.1524" layer="91"/>
+<label x="71.12" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="FRONT" gate="G$1" pin="4"/>
+<wire x1="53.34" y1="60.96" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="60.96" x2="93.98" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="V/SIG"/>
+<wire x1="93.98" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="FRONT" gate="G$1" pin="3"/>
+<wire x1="53.34" y1="58.42" x2="106.68" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="58.42" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="V/SIG"/>
+<wire x1="106.68" y1="66.04" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="FRONT" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="55.88" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="55.88" x2="81.28" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="V/SIG"/>
+<wire x1="81.28" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="FRONT" gate="G$1" pin="1"/>
+<pinref part="U$4" gate="G$1" pin="V/SIG"/>
+<wire x1="53.34" y1="53.34" x2="53.34" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="27.94" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
